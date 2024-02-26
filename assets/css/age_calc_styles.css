@@ -121,6 +121,23 @@ p {
   font-weight: 400;
 }
 
+/* Return arrow */
+.return-to-web_dev {
+  position: relative;
+  display: inline-flex;
+}
+
+.return-to-web_dev img {
+  width: 30px; 
+  height: 30px; 
+  transition: background-color 0.3s ease;
+}
+
+.return-to-web_dev:hover {
+  background-color: var(--neutral-light-grey);
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 600px) {
   
   input {
@@ -181,19 +198,61 @@ p {
 }
 
 
-/* Return arrow */
-.return-to-web_dev {
-  position: relative;
-  display: inline-flex;
-}
+@media screen and (max-width: 375px) {
+  
+  input {
+    font-size: 15px;
+    padding: 3px; 
+    height: 19px;
+    width: 38px;
+  }
 
-.return-to-web_dev img {
-  width: 30px; 
-  height: 30px; 
-  transition: background-color 0.3s ease;
-}
-
-.return-to-web_dev:hover {
-  background-color: var(--neutral-light-grey);
-  border-radius: 50%;
+  .page-container {
+    height: 70%;
+    width: 70%;
+  }
+  
+  .textbox-container {
+    height: 20%;
+    width: 0%;
+  }
+  
+  /* Textboxes */
+  .textbox {
+    height: 70%;
+    width: 70%;
+  
+  }
+  
+  
+  .results {
+    font-size: 250%;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 100%; /* width of the container */
+    border-top: 2px solid var(--neutral-light-grey);
+  }
+  
+  
+  /* Circular button */
+  .circle-button {
+    width: 60px; /* Button width */
+    height: 60px; /* Button height */
+    margin-top: 20px; /* Adjusted margin for spacing */
+    margin-left: 45%;
+    margin-bottom: -10%;
+  
+  }
+  
+  
+  /* Arrow image inside the button */
+  .circle-button img {
+    width: 30px; 
+    height: 30px; 
+  }
+  
+  .error p {
+    font-size: 13px;
+    font-weight: 400;
+  }
 }
