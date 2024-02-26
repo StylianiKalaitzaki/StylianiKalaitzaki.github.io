@@ -33,6 +33,7 @@ body {
 	line-height: 1;
 }
 
+
 ol, ul {
 	list-style: none;
 }
@@ -4538,7 +4539,7 @@ input, select, textarea {
 		top: 0.75rem;
 		right: 0.75rem;
 		border: 0;
-		color: #ffffff;
+		color: #000000;
 		font-family: 'Courier New', Courier, monospace;
 		font-size: 0.9rem;
 		font-weight: 900;

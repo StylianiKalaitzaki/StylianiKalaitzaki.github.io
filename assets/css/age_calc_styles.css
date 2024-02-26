@@ -1,0 +1,199 @@
+/* Define color variables */
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+
+body {
+  background-color: var(--neutral-off-white); /* Set your desired background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.page-container {
+  background-color: #ffffff; /* Set the background color inside the page container */
+  padding: 20px; 
+  border-radius: 20px; /* rounded corners */
+  border-bottom-right-radius: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+body, p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.textbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 200px;
+  margin: 0 30px;
+}
+
+.textbox {
+  margin-top: 20px;
+  margin-right: 30px;
+  text-align: left;
+
+}
+
+label {
+  font-size: 15px; 
+  font-weight: bold;
+  color: var(--neutral-smokey-grey)
+}
+
+input {
+  font-size: 32px;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid var(--neutral-light-grey);
+  outline: none;
+  max-width: 125px;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+
+}
+
+input:hover {
+  border-color: var(--primary-purple); /* Change border color on hover */
+}
+
+.results {
+  font-size: 100px;
+  margin-left: 30px;
+  width: 70%; /* width of the container */
+  border-top: 2px solid var(--neutral-light-grey); /* Border color for the line */
+}
+
+.purple-text {
+  color: var(--primary-purple)
+}
+
+p {
+  font-weight: 800;
+}
+
+/* Circular button */
+.circle-button {
+  display: inline-block;
+  background-color: var(--primary-purple); /* Button background color */
+  color: var(--neutral-white); /* Button text color */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Make the button circular */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 20px; /* Adjusted margin for spacing */
+  margin-left: 700px;
+  margin-bottom: -10px;
+}
+
+
+/* Style for the arrow image inside the button */
+.circle-button img {
+  width: 40px; 
+  height: 40px; 
+}
+
+
+/* Hover effect for the circular button */
+.circle-button:hover {
+  background-color: black;
+}
+
+.error {
+  color: var(--primary-light-red);
+}
+
+.error p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  
+  input {
+    font-size: 15px;
+    padding: 4px; 
+    height: 30px;
+    width: 60px;
+  }
+
+  .page-container {
+    height: 70%;
+    width: 70%;
+  }
+  
+  .textbox-container {
+    height: 20%;
+    width: 50%;
+  }
+  
+  /* Textboxes */
+  .textbox {
+    height: 70%;
+    width: 70%;
+  
+  }
+  
+  
+  .results {
+    font-size: 250%;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 100%; /* width of the container */
+    border-top: 2px solid var(--neutral-light-grey);
+  }
+  
+  
+  /* Circular button */
+  .circle-button {
+    width: 60px; /* Button width */
+    height: 60px; /* Button height */
+    margin-top: 20px; /* Adjusted margin for spacing */
+    margin-left: 45%;
+    margin-bottom: -10%;
+  
+  }
+  
+  
+  /* Arrow image inside the button */
+  .circle-button img {
+    width: 30px; 
+    height: 30px; 
+  }
+  
+  .error p {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+
+/* Return arrow */
+.return-to-web_dev {
+  position: relative;
+  display: inline-flex;
+}
+
+.return-to-web_dev img {
+  width: 30px; 
+  height: 30px; 
+  transition: background-color 0.3s ease;
+}
+
+.return-to-web_dev:hover {
+  background-color: var(--neutral-light-grey);
+  border-radius: 50%;
+}
