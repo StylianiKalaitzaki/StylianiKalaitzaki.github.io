@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title>Age calculator app</title>
+
+  
+
+  <link rel="stylesheet" type="text/css" href="assets/css/age_calc_styles.css">
+</head>
+
+<body>
+  <div class="page-container">
+	<!-- Return arrow -->
+    <a href="web_dev.html" class="return-to-web_dev">
+      <img src="images/return_arrow.png" alt="Return to index">
+    </a>
+	
+	
+    <div class="textbox-container">
+      <div class="textbox">
+          <label for="day" id="dayLabel">DAY</label>
+          <input type="text" id="day" name="day" placeholder="DD">
+          <div class="error" id="errorDay"></div>
+      </div>
+
+      <div class="textbox">
+          <label for="month" id="monthLabel">MONTH</label>
+          <input type="text" id="month" name="month" placeholder="MM">
+          <div class="error" id="errorMonth"></div>
+        </div>
+
+      <div class="textbox">
+          <label for="year" id="yearLabel">YEAR</label>
+          <input type="text" id="year" name="year" placeholder="YYYY">
+          <div class="error" id="errorYear"></div>
+        </div>
+    </div>
+
+    <!-- Circular button -->
+    <button class="circle-button">
+      <img src="images/icon-arrow.svg" alt="Arrow">
+    </button>
+
+    <div class="results">
+      <p><span class="purple-text" id="years">--</span> years</p>
+      <p><span class="purple-text" id="months">--</span> months</p>
+      <p><span class="purple-text" id="days">--</span> days</p>
+    </div>
+    
+
+    <div class="errors" id="errorMessages"></div>
+  </div>
+
+  
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+
+  <!-- Link to the external JavaScript file -->
+  <script src="assets/js/age_calc.js"></script>
+</body>
+</html>
