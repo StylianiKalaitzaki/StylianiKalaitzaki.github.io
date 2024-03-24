@@ -3664,11 +3664,12 @@ input, select, textarea {
 	border-bottom-color: rgba(255, 255, 255, 0.5);
   }
   
-  #nav ul.icons li a {
+#nav ul.icons li a {
+	display: flex;
 	color: #ffffff;/*nav icons*/
 	background-color: #000;
-	border: 0.5rem solid #000; /* creates a 0.5rem black border around the icon */
-	border-radius: 30%;
+	border: 0.2rem solid black;
+	border-radius: 50%;	/* creates a 0.5rem black border around the icon */
 }
   #nav a:hover {
 	border-bottom-color: transparent;
