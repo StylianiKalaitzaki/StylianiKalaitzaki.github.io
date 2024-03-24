@@ -3291,7 +3291,7 @@ input, select, textarea {
 
 	#intro {
 		color: #000000;
-		padding: 8rem 4rem 6rem 4rem ;
+		padding: 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3307,7 +3307,7 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
+		justify-content:center;
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3316,10 +3316,10 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
-		margin-top: -10rem;
-		margin-bottom: 20rem;
+		min-height: 50vh;
+		margin-bottom: 0;
 	}
+
 
 		#intro input, #intro select, #intro textarea {
 			color: #ffffff;
@@ -3406,9 +3406,7 @@ input, select, textarea {
 			text-align: center;
 		}
 
-		#intro + #header {
-			margin-top: -20rem;
-		}
+		
 
 			#intro + #header .logo {
 				-moz-transform: translateY(2rem);
@@ -3501,6 +3499,7 @@ input, select, textarea {
 
 /* Header */
 
+	
 	#header {
 		color: #ffffff;
 		-moz-align-items: center;
@@ -3518,18 +3517,17 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
+		justify-content:center;
 		pointer-events: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
 		position: relative;
 		text-align: center;
-		z-index: 2;
+		margin-bottom:0;
 	}
+
 
 		#header input, #header select, #header textarea {
 			color: #ffffff;
@@ -3627,9 +3625,8 @@ input, select, textarea {
 	background: rgba(255, 255, 255, 0.175);
 	height: 4rem;
 	line-height: 4rem;
-	margin: -4rem auto 0 auto;
+	margin: 0 auto 0 auto;
 	overflow: hidden;
-	padding: 0 2rem 0 0;
 	padding: 0rem 0.5rem;
 	position: relative;
 	width: calc(100% - 4rem);
