@@ -3467,10 +3467,6 @@ input, select, textarea {
 					display: none;
 				}
 
-				#intro + #header {
-					margin-top: -14rem;
-				}
-
 		}
 
 		@media screen and (max-width: 736px) {
