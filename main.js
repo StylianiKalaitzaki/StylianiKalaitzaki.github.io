@@ -13,24 +13,16 @@ function typeWriter(element, text, speed = 50) {
     }, speed);
 }
 
-function buildHeroSection () {
-    const hero = document.querySelector('#hero');
+function buildInfoSection () {
+    const hero = document.querySelector('#modal-body');
 
     hero.innerHTML = `
-            <h1>${SITE_DATA.hero.headline}</h1>
             <div id="terminal">
                 <p id="name"><span class="cursor">|</span></p>
                 <p id="location"><span class="cursor">|</span></p>
                 <p id="role"><span class="cursor">|</span></p>
                 <p id="company"><span class="cursor">|</span></p>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#xp">XP</a>
-                <a href="#contact">Contact</a>
-            </nav>
         `;
 
     const nameText = `Name: ${SITE_DATA.meta.name}`;
@@ -80,14 +72,9 @@ function buildFooterSection () {
 
 }
 
-function buildSkillsSection () {
-    const skills = document.querySelector('#skills');
-
-
-}
-
 function turnOnFlashlight (dark_overlay) {
     dark_overlay.style.opacity = '0';
+    dark_overlay.style.pointerEvents = 'none';
     setTimeout(() => dark_overlay.remove(), 800);
 }
 
@@ -100,7 +87,42 @@ function turnOffFlashlight () {
     setTimeout(() => newOverlay.style.opacity = '1', 10);
 }
 
+function closeModal() {
+    modalWindow.classList.remove('open');
+    modalContainer.classList.remove('open');
+    //setTimeout(() => modalContainer.classList.add('hidden'), 300);
+    setTimeout(() => {
+        modalContainer.classList.add('hidden');
+        modalBody.innerHTML = ''; // clear content
+    }, 300);
+}
 
+// render correct content
+function renderSection(section) {
+    switch(section) {
+        case 'info':
+            buildInfoSection();
+            break;
+        case 'skills':
+            modalBody.innerHTML = `<h2>Skills</h2>`;
+            break;
+        case 'projects':
+            modalBody.innerHTML = `<h2>Projects</h2>`;
+            break;
+        case 'xp':
+            modalBody.innerHTML = `<h2>Experience</h2>`;
+            break;
+        case 'contact':
+            modalBody.innerHTML = `<h2>Contact</h2>`;
+            break;
+        default:
+            modalBody.innerHTML = `<p>Coming soon</p>`;
+    }
+}
+
+document.querySelector('#headline').textContent = SITE_DATA.hero.headline;
+
+// ---- Flashlight ----
 document.addEventListener('keydown', (e) => {
 
     if (e.code === 'KeyF') {
@@ -108,10 +130,38 @@ document.addEventListener('keydown', (e) => {
 
         if (dark_overlay) {
             turnOnFlashlight(dark_overlay);
-            buildHeroSection();
+            //buildHeroSection();
         } else {
             turnOffFlashlight();
         }
         //buildFooterSection();
     }
 });
+
+// ---- Modal ----
+const modalContainer = document.querySelector('#modal-container');
+const modalWindow = document.querySelector('#modal-window');
+const modalBody = document.querySelector('#modal-body');
+const modalClose = document.querySelector('#modal-close');
+
+document.querySelector('nav').addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    console.log('clicked element:', e.target);
+    console.log('closest a:', e.target.closest('a'));
+    console.log('dataset:', e.target.closest('a')?.dataset);
+    if (!link) return;
+
+    e.preventDefault();
+    const section = link.dataset.section;
+    console.log('section clicked:', section);
+
+    modalContainer.classList.remove('hidden');
+    modalContainer.classList.add('open');
+
+    setTimeout(() => {
+        modalWindow.classList.add('open');
+        renderSection(section);
+    }, 10);
+});
+
+modalClose.addEventListener('click', closeModal);

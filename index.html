@@ -9,15 +9,23 @@
             <p>Press F for flashlight</p>
         </div>
 
-        <section id="hero"></section>
-        <section id="about"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
-        <section id="xp"></section>
-        <section id="contact"></section>
+        <div id="menu">
+            <h2 id="headline"></h2>
+            <nav>
+                <a href="#" data-section="info">Info</a>
+                <a href="#" data-section="skills">Skills</a>
+                <a href="#" data-section="projects">Projects</a>
+                <a href="#" data-section="xp">XP</a>
+                <a href="#" data-section="contact">Contact</a>
+            </nav>
+        </div>
 
-        <footer>
-        </footer>
+        <div id="modal-container" class="hidden">
+            <div id="modal-window">
+                <button id="modal-close">✕</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
 
         <script src="data.js"></script>
         <script src="main.js"></script>
