@@ -86,15 +86,32 @@ function buildSkillsSection () {
 
 }
 
+function turnOnFlashlight (dark_overlay) {
+    dark_overlay.style.opacity = '0';
+    setTimeout(() => dark_overlay.remove(), 800);
+}
+
+function turnOffFlashlight () {
+    const newOverlay = document.createElement('div');
+    newOverlay.id = 'overlay';
+    newOverlay.innerHTML = '<p>Press F for flashlight</p>';
+    newOverlay.style.opacity = '0';
+    document.body.prepend(newOverlay);
+    setTimeout(() => newOverlay.style.opacity = '1', 10);
+}
+
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'f' || e.key === 'F') {
-        const dark_overlay = document.querySelector('#overlay');
-        dark_overlay.style.opacity = '0';
-        setTimeout(() => dark_overlay.remove(), 800);
 
-        // start animations after darkness fades
-        buildHeroSection();
+    if (e.code === 'KeyF') {
+        const dark_overlay = document.querySelector('#overlay');
+
+        if (dark_overlay) {
+            turnOnFlashlight(dark_overlay);
+            buildHeroSection();
+        } else {
+            turnOffFlashlight();
+        }
         //buildFooterSection();
     }
 });
