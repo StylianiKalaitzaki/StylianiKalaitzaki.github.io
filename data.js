@@ -12,7 +12,7 @@ window.SITE_DATA = {
   },
 
   hero: {
-    headline: ["Turning ", "complex data", " into\nclear decisions."],
+    headline: ["Turning, complex data, into clear decisions."],
     sub: "I build data models and analytical solutions for supply chain operations — working close \
     to the business to make multidimensional data usable and meaningful. Based in Thessaloniki, Greece.",
     ctas: [
@@ -56,12 +56,12 @@ window.SITE_DATA = {
       items: [
         "Python",
         "SQL",
+        "R",
         "Prolog",
         "MiniZinc",
-        "R",
         "Java"
       ],
-    },
+    }
   ],
 
   projects: [],

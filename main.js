@@ -104,7 +104,7 @@ function renderSection(section) {
             buildInfoSection();
             break;
         case 'skills':
-            modalBody.innerHTML = `<h2>Skills</h2>`;
+            buildSkillsSection();
             break;
         case 'projects':
             modalBody.innerHTML = `<h2>Projects</h2>`;
@@ -118,6 +118,25 @@ function renderSection(section) {
         default:
             modalBody.innerHTML = `<p>Coming soon</p>`;
     }
+}
+
+function buildSkillsSection() {
+  const skills = document.querySelector('#modal-body');
+
+  let html = `<h2>Skills</h2>`;
+
+  for (const category of SITE_DATA.stack) {
+    html += `<h3 class="skill-category">${category.name}</h3>`;
+    html += `<div class="skill-items">`;
+
+    for (const item of category.items) {
+      html += `<span class="skill-circle">${item}</span>`;
+    }
+
+    html += `</div>`;
+  }
+
+  skills.innerHTML = html;
 }
 
 document.querySelector('#headline').textContent = SITE_DATA.hero.headline;

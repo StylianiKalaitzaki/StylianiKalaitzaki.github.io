@@ -79,12 +79,20 @@ nav a:hover::after {
     animation: blink normal 3s infinite ease-in-out;
 }
 
+@keyframes drift {
+  0%   { background-position: 48% 48%; }
+  25%  { background-position: 52% 49%; }
+  50%  { background-position: 51% 52%; }
+  75%  { background-position: 49% 51%; }
+  100% { background-position: 48% 48%; }
+}
+
 body {
-    background: radial-gradient(circle, #ffffff 0%, #000000 100%);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: var(--font-mono);
-    margin: 0;
+  background: radial-gradient(circle at center, #ffffff 0%, #000000 40%);
+  background-size: 200% 200%;
+  background-attachment: fixed;
+  animation: drift 10s ease-in-out infinite;
+  font-family: var(--font-mono);
 }
 
 #menu {
@@ -145,10 +153,23 @@ body {
     top: 1rem;
     right: 1rem;
     background: none;
-    border: none;
-    color: var(--color-accent);
+    border: 2px solid var(--color-text);
+    border-radius: 12%;
+    color: var(--color-text);
     font-size: 1.2rem;
     cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+#modal-close:hover {
+    color: var(--color-bg);
+    background-color: var(--color-text);
 }
 
 .hidden {
@@ -160,4 +181,26 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-circle {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.skill-circle:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  cursor: pointer;
 }
