@@ -110,10 +110,10 @@ function renderSection(section) {
             modalBody.innerHTML = `<h2>Projects</h2>`;
             break;
         case 'xp':
-            modalBody.innerHTML = `<h2>Experience</h2>`;
+            buildXPSection();
             break;
         case 'contact':
-            modalBody.innerHTML = `<h2>Contact</h2>`;
+            buildContactSection();
             break;
         default:
             modalBody.innerHTML = `<p>Coming soon</p>`;
@@ -121,22 +121,55 @@ function renderSection(section) {
 }
 
 function buildSkillsSection() {
-  const skills = document.querySelector('#modal-body');
+    const skills = document.querySelector('#modal-body');
 
-  let html = `<h2>Skills</h2>`;
+    let html = `<h2>Skills</h2>`;
 
-  for (const category of SITE_DATA.stack) {
-    html += `<h3 class="skill-category">${category.name}</h3>`;
-    html += `<div class="skill-items">`;
+    for (const category of SITE_DATA.stack) {
+        html += `<h3 class="skill-category">${category.name}</h3>`;
+        html += `<div class="skill-items">`;
 
-    for (const item of category.items) {
-      html += `<span class="skill-circle">${item}</span>`;
+        for (const item of category.items) {
+            html += `<span class="skill-circle">${item}</span>`;
+        }
+
+        html += `</div>`;
     }
 
-    html += `</div>`;
-  }
+    skills.innerHTML = html;
+}
 
-  skills.innerHTML = html;
+function buildXPSection() {
+    const xp = document.querySelector('#modal-body');
+
+    let html = `<h2>XP</h2>`;
+
+    for (const job of SITE_DATA.experience) {
+        html += `
+            <div class="xp-items">
+                <p>Company: ${job.company}</p>
+                <p>Role: ${job.role}</p>
+                <p>Location: ${job.location}</p>
+                <p>Period: ${job.period}</p>
+            </div>`;
+    }
+
+    xp.innerHTML = html;
+}
+
+function buildContactSection() {
+    const contact = document.querySelector('#modal-body');
+
+    let html = `<h2>Contact</h2>`;
+
+    for (const link of SITE_DATA.contact.links) {
+        html += `
+            <div class="contact-items">
+                <p>${link.platform}: ${link.handle}</p>
+            </div>`;
+    }
+
+    contact.innerHTML = html;
 }
 
 document.querySelector('#headline').textContent = SITE_DATA.hero.headline;

@@ -1,6 +1,7 @@
 :root {
     --color-bg: #ffffff;
     --color-text: #000000;
+    --color-red: #ff0000;
     --font-mono: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
 }
 
@@ -128,7 +129,7 @@ body {
 
 #modal-window {
     background: var(--color-bg);
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--color-text);
     border-radius: 25px;
     padding: 2rem;
     position: relative;
@@ -169,7 +170,7 @@ body {
 
 #modal-close:hover {
     color: var(--color-bg);
-    background-color: var(--color-text);
+    background-color: var(--color-red);
 }
 
 .hidden {
@@ -203,4 +204,13 @@ body {
   color: #ffffff;
   transform: translateY(-2px);
   cursor: pointer;
+}
+
+.xp-items {
+    border-top: 1px dashed var(--color-text);
+    border-bottom: 1px dashed var(--color-text);
+}
+
+.contact-items {
+    align-self: flex-start;
 }

@@ -12,7 +12,7 @@ window.SITE_DATA = {
   },
 
   hero: {
-    headline: ["Turning, complex data, into clear decisions."],
+    headline: ["Turning, complex data, into clear decisions..."],
     sub: "I build data models and analytical solutions for supply chain operations — working close \
     to the business to make multidimensional data usable and meaningful. Based in Thessaloniki, Greece.",
     ctas: [
@@ -69,7 +69,8 @@ window.SITE_DATA = {
     {
       period: "MAY 2025 - PRESENT",
       role: "Associate Application Engineer",
-      company: "Dataviva · Thessaloniki, Greece",
+      company: "Dataviva",
+      location: "Thessaloniki, Greece",
       bullets: [
         "Designed and shipped a Kubernetes-native E2E load testing platform (Playwright + Artillery) that enabled data-driven architectural validation before enterprise client go-live. Implemented ephemeral job-based execution, VU auto-splitting, wave-based orchestration, and granular observability - surfacing performance insights that informed platform-wide architectural decisions.",
         "Managed multi-cluster infrastructure via Rancher (K3s) and ArgoCD App of Apps GitOps delivery across internal, external, and client environments.",
@@ -82,7 +83,10 @@ window.SITE_DATA = {
         "PostgreSQL",
         "Supply Chain"
       ],
-    },
+    }
+  ],
+
+  education: [
     {
       period: "OCT 2023 - PRESENT",
       role: "MSc. Artificial Intelligence and Data Analytics",
@@ -107,15 +111,15 @@ window.SITE_DATA = {
     },
   ],
 
-  certifications: [
-  ],
-
-  contact: {
-    intro: "Reach out directly.",
+  certifications: {
     languages: [
       { lang: "Greek", level: "Native" },
       { lang: "English", level: "C2 Proficiency" }
     ],
+  },
+
+  contact: {
+    intro: "Reach out directly.",
     links: [
       {
         icon: "email",
