@@ -142,7 +142,9 @@ function buildSkillsSection() {
 function buildXPSection() {
     const xp = document.querySelector('#modal-body');
 
-    let html = `<h2>XP</h2>`;
+    let html = `<h2>Experience</h2>`;
+
+    html += `<div class="experience-bar" id="expBar"></div>`;
 
     for (const job of SITE_DATA.experience) {
         html += `
@@ -151,10 +153,31 @@ function buildXPSection() {
                 <p>Role: ${job.role}</p>
                 <p>Location: ${job.location}</p>
                 <p>Period: ${job.period}</p>
+                <p>${job.xp} XP</p>
             </div>`;
     }
 
     xp.innerHTML = html;
+    buildExperienceBar(SITE_DATA.stats.years);
+
+}
+
+function buildExperienceBar(yearsOfExperience) {
+    const totalBoxes = 40;
+    const filledBoxes = yearsOfExperience;
+
+    const bar = document.getElementById('expBar');
+    if (!bar) return;
+
+    for (let i = 0; i < totalBoxes; i++) {
+        const box = document.createElement('div');
+        box.classList.add('box');
+        if (i < filledBoxes) {
+            box.classList.add('filled');
+            box.style.transitionDelay = `${i * 0.5}s`;
+        }
+        bar.appendChild(box);
+    }
 }
 
 function buildContactSection() {

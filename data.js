@@ -38,10 +38,11 @@ window.SITE_DATA = {
       domain experts to turn operational complexity into structured information.",
       "My philosophy: <b>understand the business first, model the data second, automate everything \
       else.</b>",
-    ],
-    stats: [
-      { value: "1+ yrs", label: "production Exp." }
-    ],
+    ]
+  },
+
+  stats: {
+    years: 1
   },
 
   mainStack: [
@@ -71,6 +72,7 @@ window.SITE_DATA = {
   experience: [
     {
       period: "MAY 2025 - PRESENT",
+      xp: "+1",
       role: "Associate Application Engineer",
       company: "Dataviva",
       location: "Thessaloniki, Greece",
