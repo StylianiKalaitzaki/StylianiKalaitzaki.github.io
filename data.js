@@ -52,7 +52,6 @@ window.SITE_DATA = {
   stack: [
     {
       name: "Languages",
-      type: "tags",
       items: [
         "Python",
         "SQL",
@@ -61,6 +60,10 @@ window.SITE_DATA = {
         "MiniZinc",
         "Java"
       ],
+    },
+    {
+      name: "Version Control",
+      items: ["SVN", "Git"],
     }
   ],
 
@@ -117,7 +120,6 @@ window.SITE_DATA = {
       { lang: "English", level: "C2 Proficiency" }
     ],
   },
-
   contact: {
     intro: "Reach out directly.",
     links: [
