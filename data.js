@@ -68,7 +68,14 @@ window.SITE_DATA = {
     }
   ],
 
-  projects: [],
+  projects: [
+    {
+      title: "Kaggle Notebooks",
+      description: "Exploratory data analysis of various datasets.",
+      tools: ["R"],
+      link: "https://www.kaggle.com/stylianikalaitzaki/code"
+    }
+  ],
   experience: [
     {
       period: "MAY 2025 - PRESENT",

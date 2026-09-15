@@ -107,7 +107,7 @@ function renderSection(section) {
             buildSkillsSection();
             break;
         case 'projects':
-            modalBody.innerHTML = `<h2>Projects</h2>`;
+            buildProjectsSection();
             break;
         case 'xp':
             buildXPSection();
@@ -160,6 +160,26 @@ function buildXPSection() {
     xp.innerHTML = html;
     buildExperienceBar(SITE_DATA.stats.years);
 
+}
+
+function buildProjectsSection() {
+    const projects = document.querySelector('#modal-body');
+
+    let html = `<h2>Projects</h2>`;
+
+    for (const project of SITE_DATA.projects) {
+        html += `
+            <div class="project-items">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${project.tools.map(tool => `<span class="skill-circle">${tool}</span>`).join('')}
+                </div>
+                <a href="${project.link}" target="_blank" rel="noopener noreferrer">View project</a>
+            </div>`;
+    }
+
+    projects.innerHTML = html;
 }
 
 function buildExperienceBar(yearsOfExperience) {
