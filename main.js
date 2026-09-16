@@ -103,14 +103,17 @@ function renderSection(section) {
         case 'info':
             buildInfoSection();
             break;
+        case 'xp':
+            buildXPSection();
+            break;
+        case 'ed':
+            buildEdSection();
+            break;
         case 'skills':
             buildSkillsSection();
             break;
         case 'projects':
             buildProjectsSection();
-            break;
-        case 'xp':
-            buildXPSection();
             break;
         case 'contact':
             buildContactSection();
@@ -159,6 +162,24 @@ function buildXPSection() {
 
     xp.innerHTML = html;
     buildExperienceBar(SITE_DATA.stats.years);
+
+}
+
+function buildEdSection() {
+    const ed = document.querySelector('#modal-body');
+
+    let html = `<h2>Education</h2>`;
+
+    for (const diploma of SITE_DATA.education) {
+        html += `
+            <div class="xp-items">
+                <p class="title">${diploma.title}</p>
+                <p class="subtitle">${diploma.institution}</p>
+                <p class="subtitle">${diploma.period}</p>
+            </div>`;
+    }
+
+    ed.innerHTML = html;
 
 }
 

@@ -207,7 +207,8 @@ body {
 }
 
 .xp-items {
-    border-top: 1px dashed var(--color-text);
+    align-self: stretch;
+    text-align: left;
     border-bottom: 1px dashed var(--color-text);
 }
 
@@ -262,4 +263,13 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin: 0.5rem 0;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: #666;
 }

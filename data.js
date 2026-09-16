@@ -80,15 +80,10 @@ window.SITE_DATA = {
     {
       period: "MAY 2025 - PRESENT",
       xp: "+1",
-      role: "Associate Application Engineer",
+      role: "Application Engineer",
       company: "Dataviva",
       location: "Thessaloniki, Greece",
-      bullets: [
-        "Designed and shipped a Kubernetes-native E2E load testing platform (Playwright + Artillery) that enabled data-driven architectural validation before enterprise client go-live. Implemented ephemeral job-based execution, VU auto-splitting, wave-based orchestration, and granular observability - surfacing performance insights that informed platform-wide architectural decisions.",
-        "Managed multi-cluster infrastructure via Rancher (K3s) and ArgoCD App of Apps GitOps delivery across internal, external, and client environments.",
-        "Automated image build and delivery pipelines via Gitea Actions to Harbor and Azure Container Registry for air-gapped client deployments.",
-        "Implemented Prometheus and Grafana observability with Pushgateway for ephemeral job metrics, SLA dashboards, and SQLite-backed regression tracking.",
-      ],
+      bullets: [],
       tags: [
         "Python",
         "SVN",
@@ -101,8 +96,8 @@ window.SITE_DATA = {
   education: [
     {
       period: "OCT 2023 - PRESENT",
-      role: "MSc. Artificial Intelligence and Data Analytics",
-      company: "Dataviva · Thessaloniki, Greece",
+      title: "MSc. Artificial Intelligence and Data Analytics",
+      institution: "University of Macedonia · Thessaloniki, Greece",
       bullets: [
       ],
       tags: [
@@ -115,8 +110,8 @@ window.SITE_DATA = {
     },
     {
       period: "SEPT 2018 - SEPT 2022",
-      role: "BSc. Applied Informatics",
-      company: "University of Macedonia · Thessaloniki, Greece",
+      title: "BSc. Applied Informatics",
+      institution: "University of Macedonia · Thessaloniki, Greece",
       desc: "",
       tags: [
       ],
