@@ -224,14 +224,19 @@ function buildExperienceBar(yearsOfExperience) {
 function buildContactSection() {
     const contact = document.querySelector('#modal-body');
 
-    let html = `<h2>Contact</h2>`;
+    let html = `<h2>Contact</h2><ul class="contact-list">`;
 
     for (const link of SITE_DATA.contact.links) {
         html += `
-            <div class="contact-items">
-                <p>${link.platform}: ${link.handle}</p>
-            </div>`;
+            <li>
+                <svg class="icon"><use href="#icon-${link.icon}"/></svg>
+                <div class="contact-text">
+                    <span class="platform">${link.platform}</span>
+                    <a href="${link.href}">${link.handle}</a>
+                </div>
+            </li>`;
     }
+    html += `</ul>`;
 
     contact.innerHTML = html;
 }

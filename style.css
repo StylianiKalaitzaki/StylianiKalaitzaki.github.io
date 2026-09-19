@@ -212,10 +212,6 @@ body {
     border-bottom: 1px dashed var(--color-text);
 }
 
-.contact-items {
-    align-self: flex-start;
-}
-
 /* Start XP Bar Style */
 .experience-bar {
   display: flex;
@@ -272,4 +268,34 @@ body {
 .subtitle {
     font-size: 0.75rem;
     color: #666;
+}
+
+/* Contact Styles */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;          /* icon and text block sit side by side */
+    align-items: center;    /* icon is vertically centered against both lines */
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column; /* stacks platform name above the handle */
+}
+
+.platform {
+    font-size: 0.8em;
+    opacity: 0.7;           /* makes the label look secondary */
+}
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    color: #000000;
 }
