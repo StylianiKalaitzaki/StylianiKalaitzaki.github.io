@@ -242,6 +242,7 @@ function buildContactSection() {
 }
 
 document.querySelector('#headline').textContent = SITE_DATA.hero.headline;
+document.querySelector('#sub').textContent = SITE_DATA.hero.sub;
 
 // ---- Flashlight ----
 document.addEventListener('keydown', (e) => {

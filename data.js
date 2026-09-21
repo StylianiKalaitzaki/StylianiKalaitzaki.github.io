@@ -12,19 +12,8 @@ window.SITE_DATA = {
   },
 
   hero: {
-    headline: ["Turning, complex data, into clear decisions..."],
-    sub: "I build data models and analytical solutions for supply chain operations — working close \
-    to the business to make multidimensional data usable and meaningful. Based in Thessaloniki, Greece.",
-    ctas: [
-      { label: "$ explore --projects", href: "#projects", style: "primary" },
-      {
-        label: "$ open github",
-        href: "https://github.com/StylianiKalaitzaki",
-        style: "ghost",
-        external: true,
-      },
-      { label: "$ get --in-touch", href: "#contact", style: "ghost" },
-    ],
+    headline: ["Stella Kalaitzaki"],
+    sub: "Turning, complex data, into clear decisions..."
   },
 
   about: {
