@@ -70,6 +70,30 @@ window.SITE_DATA = {
 
   projects: [
     {
+      title: "DeepFake Video Detection",
+      description: "A deepfake video detector built in Python. It extracts faces from video frames with MTCNN, classifies them as real or fake with a fine-tuned EfficientNetB0, and combines the frame-level predictions into one verdict per video.",
+      tools: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "TensorFlow", "Keras"],
+      link: "https://github.com/StylianiKalaitzaki/DeepFake-Video-Detection"
+    },
+    {
+      title: "FashionMNIST Dimensionality Reduction & Clustering",
+      description: "A benchmark of how dimensionality reduction affects clustering on Fashion-MNIST. It compares PCA, Factor Analysis, FastICA and two autoencoders against raw pixels, each paired with five clustering algorithms and scored on cluster quality and runtime.",
+      tools: ["Python", "pandas", "numpy", "sklearn", "Neural Networks", "tensorflow"],
+      link: "https://github.com/StylianiKalaitzaki/DimensionalityReduction_Clustering_FashionMNIST"
+    },
+    {
+      title: "Bankruptcy Risk Classifier",
+      description: "Led a project to predict bankruptcy risk using machine learning. Conducted data preprocessing, exploratory analysis, and model development. Implemented 8 classification algorithms and evaluated model performance. Utilized cross-validation and oversampling techniques. Generated visualizations and documented project findings.",
+      tools: ["Python", "pandas", "numpy", "sklearn", "Neural Networks", "tensorflow"],
+      link: "https://github.com/StylianiKalaitzaki/FinancialHealthPrediction"
+    },
+    {
+      title: "Movie Recommender",
+      description: "A hybrid movie recommender built in Python for a university course in Information Retrieval and Search Engines. It combines item-based and user-based collaborative filtering in two stages to predict ratings for movies a user hasn't seen, and it is evaluated with RMSE, MAE, precision and recall.",
+      tools: ["Python", "pandas", "numpy", "sklearn"],
+      link: "https://github.com/StylianiKalaitzaki/Movie-Recommender-System/tree/main"
+    },
+    {
       title: "Kaggle Notebooks",
       description: "Exploratory data analysis of various datasets.",
       tools: ["R"],

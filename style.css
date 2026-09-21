@@ -247,7 +247,6 @@ body {
 /* End XP Bar Style */
 
 .project-items {
-    border-top: 1px dashed var(--color-text);
     border-bottom: 1px dashed var(--color-text);
     text-align: left;
     width: 100%;
